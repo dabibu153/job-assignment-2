@@ -21,7 +21,10 @@ function InputForm() {
       empMobile: empMobile,
     };
     axios
-      .post(`${api}/api/addEmployee`, data)
+      .post(
+        "https://job-assignent-2-backend.herokuapp.com/api/addEmployee",
+        data
+      )
       .then((res) => console.log(res))
       .catch((err) => console.log(err.message));
   };
