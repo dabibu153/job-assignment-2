@@ -7,10 +7,10 @@ import { useState } from "react";
 import axios from "axios";
 
 function InputForm() {
-  const [empId, setempId] = useState(2767676767);
-  const [empName, setempName] = useState("aaaaaaa");
-  const [empEmail, setempEmail] = useState("sa@gmail.com");
-  const [empMobile, setempMobile] = useState(5432154321);
+  const [empId, setempId] = useState();
+  const [empName, setempName] = useState("");
+  const [empEmail, setempEmail] = useState("");
+  const [empMobile, setempMobile] = useState();
 
   const handleClick = () => {
     let data = {
