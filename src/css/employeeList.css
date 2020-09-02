@@ -1,0 +1,26 @@
+.block {
+  width: 100%;
+}
+
+.head {
+  margin-top: 20px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 2fr 2fr 2fr 0.5fr;
+}
+
+.headerText {
+  text-align: center;
+  color: white;
+  font-size: 25px;
+}
+
+.employees {
+  flex: 1;
+}
+
+hr {
+  margin: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

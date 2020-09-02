@@ -1,0 +1,10 @@
+.oneEmployeeData {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 2fr 2fr 2fr 0.5fr;
+}
+.dataText {
+  text-align: center;
+  color: #c9cbcd;
+  font-size: 20px;
+}

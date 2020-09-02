@@ -1,0 +1,45 @@
+.formBody {
+  height: 500px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputField {
+  background-color: #131c21;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.inputField > input {
+  border: none;
+  background-color: #131c21;
+  font-size: 25px;
+  width: 100%;
+  color: #c9cbcd;
+  margin-left: 10px;
+}
+
+button {
+  height: 50px;
+  width: 200px;
+  color: #c9cbcd;
+  font-size: 20px;
+  background-color: #2a3c46;
+  border: none;
+  border-radius: 15px;
+}
+button:hover {
+  background-color: black;
+  cursor: pointer;
+}

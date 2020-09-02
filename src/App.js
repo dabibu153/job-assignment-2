@@ -1,25 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./css/app.css";
+import InputForm from "./inputForm";
+import EmployeeList from "./employeeList";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <div className="appBody">
+          <div className="bodyHeader">
+            <Link to="/form" style={{ textDecoration: "none" }}>
+              <div className="header1">ADD EMPLOYEES</div>
+            </Link>
+            <Link to="/list" style={{ textDecoration: "none" }}>
+              <div className="header2">EMPLOYEE LIST</div>
+            </Link>
+          </div>
+          <div className="bodyContent">
+            <Switch>
+              <Route path="/" exact>
+                <h1>select what u wana do</h1>
+              </Route>
+              <Route path="/form" exact component={InputForm} />
+              <Route path="/list" exact component={EmployeeList} />
+            </Switch>
+          </div>
+        </div>
+      </div>
+    </Router>
   );
 }
 

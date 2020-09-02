@@ -1,0 +1,70 @@
+.App {
+  background-color: #090e11;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.appBody {
+  height: 90vh;
+  width: 90vw;
+  background-color: #262d31;
+  border: 1px solid #3c4247;
+  display: flex;
+  flex-direction: column;
+}
+
+.bodyHeader {
+  background-color: #131c21;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 5px;
+}
+
+.header1 {
+  color: #c9cbcd;
+  font-size: 20px;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.header1:hover {
+  background-color: #090e11;
+  border-radius: 10px;
+}
+.header2 {
+  color: #c9cbcd;
+  font-size: 20px;
+  padding: 5px;
+}
+.header2:hover {
+  background-color: #090e11;
+  border-radius: 10px;
+}
+
+.bodyContent {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  overflow-y: scroll;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
