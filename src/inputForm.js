@@ -25,7 +25,13 @@ function InputForm() {
         "https://job-assignent-2-backend.herokuapp.com/api/addEmployee",
         data
       )
-      .then((res) => console.log(res))
+      .then((res) => {
+        console.log(res);
+        setempId();
+        setempMobile();
+        setempName("");
+        setempEmail("");
+      })
       .catch((err) => console.log(err.message));
   };
 
