@@ -4,6 +4,7 @@ import EmployeeData from "./employeeData";
 import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
+let api = process.env.REACT_APP_BACKEND_URL;
 
 function EmployeeList() {
   const [employeess, setemployeess] = useState([]);
@@ -12,7 +13,7 @@ function EmployeeList() {
   }, []);
 
   const refreshData = () => {
-    axios.get("http://localhost:5000/api/employeeList").then((res) => {
+    axios.get(`${api}/api/employeeList`).then((res) => {
       console.log(res.data);
       setemployeess([...res.data]);
     });
@@ -21,11 +22,9 @@ function EmployeeList() {
   const deleteEmployee = (id1) => {
     console.log(id1);
 
-    axios
-      .post("http://localhost:5000/api/deleteEmployee", { id: id1 })
-      .then((res) => {
-        refreshData();
-      });
+    axios.post(`${api}/api/deleteEmployee`, { id: id1 }).then((res) => {
+      refreshData();
+    });
   };
   return (
     <div className="block">

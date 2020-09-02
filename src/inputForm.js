@@ -5,6 +5,7 @@ import { BsFillPersonFill } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 import { useState } from "react";
 import axios from "axios";
+let api = process.env.REACT_APP_BACKEND_URL;
 
 function InputForm() {
   const [empId, setempId] = useState();
@@ -20,7 +21,7 @@ function InputForm() {
       empMobile: empMobile,
     };
     axios
-      .post("http://localhost:5000/api/addEmployee", data)
+      .post(`${api}/api/addEmployee`, data)
       .then((res) => console.log(res))
       .catch((err) => console.log(err.message));
   };
