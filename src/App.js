@@ -20,7 +20,7 @@ function App() {
           <div className="bodyContent">
             <Switch>
               <Route path="/" exact>
-                <h1>select what u wana do</h1>
+                <h1 style={{ color: "white" }}>Choose from header</h1>
               </Route>
               <Route path="/form" exact component={InputForm} />
               <Route path="/list" exact component={EmployeeList} />
