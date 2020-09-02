@@ -13,18 +13,25 @@ function EmployeeList() {
   }, []);
 
   const refreshData = () => {
-    axios.get(`${api}/api/employeeList`).then((res) => {
-      console.log(res.data);
-      setemployeess([...res.data]);
-    });
+    axios
+      .get("https://job-assignent-2-backend.herokuapp.com/api/employeeList")
+      .then((res) => {
+        console.log(res.data);
+        setemployeess([...res.data]);
+      });
   };
 
   const deleteEmployee = (id1) => {
     console.log(id1);
 
-    axios.post(`${api}/api/deleteEmployee`, { id: id1 }).then((res) => {
-      refreshData();
-    });
+    axios
+      .post(
+        "https://job-assignent-2-backend.herokuapp.com/api/deleteEmployee",
+        { id: id1 }
+      )
+      .then((res) => {
+        refreshData();
+      });
   };
   return (
     <div className="block">
